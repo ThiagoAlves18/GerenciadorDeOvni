@@ -40,6 +40,14 @@ namespace GerenciadorDeOvni
                 string planetaOrigem = cmbOrigem.Text;
 
                 BibliotecaOVNI.OVNI ovni = new BibliotecaOVNI.OVNI(maxTripulantes, maxAbduzidos, planetaOrigem);
+                
+                Gerenciador gerenciador = new Gerenciador(ovni);
+
+                Hide();
+
+                gerenciador.ShowDialog();
+
+                Show();
             }
         }
     }
